@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(241, 241, 200);
+}
+
+#formulario{
+    margin: 20vh auto;
+    background-image: url('./imagens/beach_tenis.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/*Coloca o conteudo dentro dele antes do conteúdo real do elemento html,
+inserido como seu "primeiro filho". Útil para criar efeitos visuais*/
+#formulario::before { 
+    content: ""; /*necessario para aplicar o ::before*/
+    position: absolute; /*faz com que ele se ajuste ao elemento pai*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /*top-left-right-bottom:0 espande o overlay para cconrir todo o container*/
+    background-color: rgba(255, 255, 255, 0.2); /* White overlay with 60% opacity */
+    z-index: 1; /*Garante que o overlay fique a cima do fundo*/
+}
+
+/* faz com  que os elementos filho da div sejam exibidos sobre o overlay, fazendo que que eles nao fique transparentes */
+#formulario * {
+    position: relative;
+    z-index: 2;  
+}
+
+form{
+    max-width: 80%;
+}
+
+button{
+    margin-top: 1vh;
+}
