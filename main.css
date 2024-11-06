@@ -9,6 +9,7 @@ body{
     background-position: center;
     border-radius: 12px;
     padding: 10px;
+    max-width: 700px;
 }
 
 /*Coloca o conteudo dentro dele antes do conteúdo real do elemento html,
